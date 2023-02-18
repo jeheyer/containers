@@ -1,0 +1,4 @@
+service: gunicorn-demo
+runtime: python39
+env: standard
+entrypoint: gunicorn --bind=0.0.0.0:$PORT --workers=3 wsgi:application

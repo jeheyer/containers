@@ -1,0 +1,6 @@
+service: fastapi-demo
+runtime: python38
+env: standard
+##entrypoint: gunicorn -w 2 -k uvicorn.workers.UvicornWorker app:app
+#entrypoint: hypercorn --workers 2 app:app
+entrypoint: hypercorn --workers 2 main:app

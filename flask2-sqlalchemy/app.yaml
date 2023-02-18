@@ -1,0 +1,4 @@
+service: flask-demo
+runtime: python38
+env: standard
+entrypoint: gunicorn -w 2 app:app

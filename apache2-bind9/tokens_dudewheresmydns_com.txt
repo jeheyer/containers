@@ -1,0 +1,13 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+tokens.dudewheresmydns.com	IN SOA	ns.tokens.dudewheresmydns.com. mail.tokens.dudewheresmydns.com. (
+				2021051108 ; serial
+				43200      ; refresh (12 hours)
+				180        ; retry (3 minutes)
+				1209600    ; expire (2 weeks)
+				10800      ; minimum (3 hours)
+				)
+			NS	ns.gcp.j5.org.
+$ORIGIN tokens.dudewheresmydns.com.
+*                       A       127.0.0.53
+

@@ -1,0 +1,4 @@
+service: uwsgi-demo
+runtime: python310
+env: standard
+entrypoint: uwsgi --http :$PORT --workers 3 --wsgi-file wsgi.py --callable application --enable-threads

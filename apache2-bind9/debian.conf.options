@@ -1,0 +1,46 @@
+
+options {
+	directory "/var/cache/bind";
+        pid-file        "/var/run/named/pid";
+        dump-file       "/var/dump/named_dump.db";
+        statistics-file "/var/stats/named.stats";
+        recursion no;
+        allow-query { 127.0.0.0/8; 192.168.0.0/16; 172.16.0.0/12; 10.0.0.0/8; 100.64.0.0/10; };
+        allow-transfer { 127.0.0.0/8; 192.168.0.0/16; 172.16.0.0/12; 10.0.0.0/8; 100.64.0.0/10; };
+        allow-notify { 127.0.0.1/32; };
+        allow-update { 127.0.0.1/32; };
+        dnssec-validation auto;
+        dnssec-enable no;
+        filter-aaaa-on-v4 yes;
+        auth-nxdomain no;    # conform to RFC1035
+        masterfile-format text;
+};
+
+logging {
+ channel default_log {
+  file "/var/log/named/named.log" versions 3 size 10m;
+  severity dynamic;
+  print-time yes;
+  print-category yes;
+  print-severity yes;
+ };
+ channel queries_log {
+  file "/var/log/named/query.log" versions 3 size 1m;
+  severity dynamic;
+  print-time yes;
+  print-category yes;
+  print-severity yes;
+ };
+ channel xfer_log {
+  file "/var/log/named/xfer.log" versions 3 size 1m;
+  severity dynamic;
+  print-time yes;
+  print-category yes;
+  print-severity yes;
+ };
+ category default { default_log; };
+ category queries { queries_log; };
+ category xfer-in { xfer_log; };
+ category xfer-out { xfer_log; };
+};
+

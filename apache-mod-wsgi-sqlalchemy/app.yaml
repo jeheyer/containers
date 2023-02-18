@@ -1,0 +1,4 @@
+service: wsgi-demo
+runtime: python38
+env: standard
+entrypoint: uwsgi --http :$PORT --wsgi-file main.wsgi --callable application --enable-threads

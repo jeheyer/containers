@@ -1,0 +1,5 @@
+zone "tokens.dudewheresmydns.com" {
+  type master;
+  file "tokens_dudewheresmydns_com.txt";
+  allow-query { any; };
+};
