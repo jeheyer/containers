@@ -1,12 +1,13 @@
 # Just Some Containers I've Built
 
-| Name                                                      | Description                                   | Base Image      | Docker Image                             |
-|-----------------------------------------------------------|-----------------------------------------------|-----------------|------------------------------------------|
-| [flask2_sqlalchemy](flask2_sqlachemy/)                    | Flask 2.x and Python 3.10.x                   | `ubuntu:latest` | `johnnylingo/flask2-sqlalchemy`          | 
-| [apache-mod-wsgi-sqlalchemy](apache-mod-wsgi-sqlalchemy/) | Apache 2.4 w/ mod WSGI and Python 3.10.x      | `ubuntu:latest` | `johnnylingo/apache-mod-wsgi-sqlalchemy` | 
-| [apache2-bind9](apache2-bind9/)                           | Apache 2.4 and Bind 9                         | `ubuntu:latest` | `johnnylingo/apache2-bind9`              | 
-| [gunicorn-bare](gunicorn-bare/)                           | Gunicorn and some very basic packages         | `debian:latest` | `johnnylingo/gunicorn-bare`              | 
-| [uwsgi-bare](uwsgi-bare/)                                 | UWSGI web server and some very basic packages | `debian:latest` | `johnnylingo/uwsgi-bare`                 | 
+| Name                                   | Description                                  | Base Image      | Docker Image                   |
+|----------------------------------------|----------------------------------------------|-----------------|--------------------------------|
+| [flask2_sqlalchemy](flask2_sqlachemy)  | Flask 2.x and Python 3.10.x w/ SQL Alchemy   | `ubuntu:latest` | `johnnylingo/flask2-sqlalchemy` | 
+| [quart_sqlalchemy](flask2_sqlachemy)   | Quartand Python 3.10.x w/ SQL Alchemy        | `ubuntu:latest` | `johnnylingo/quart-sqlalchemy` |
+| [apache2-bind9](apache2-bind9)         | Apache 2.4 and Bind 9                        | `ubuntu:latest` | `johnnylingo/apache2-bind9`    | 
+| [gunicorn-bare](gunicorn-bare)         | Gunicorn 20.x web server                     | `debian:latest` | `johnnylingo/gunicorn-bare`    | 
+| [uwsgi-bare](uwsgi-bare)               | UWSGI web server                             | `debian:latest` | `johnnylingo/uwsgi-bare`       | 
+| [apache-mod-wsgi](apache-mod-wsgi)     | Apache 2.4 web server w/ mod WSGI            | `debian:latest` | `johnnylingo/apache-mod-wsgi`  |
 
 # Usage Instructions
 
