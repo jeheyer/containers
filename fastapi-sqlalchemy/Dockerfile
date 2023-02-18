@@ -11,8 +11,7 @@ RUN rm -Rf /var/lib/apt/lists/*
 ENV APP_DIR=/opt
 ENV APP=main:app
 ENV PORT=8000
+ENV NUM_WORKERS=3
 COPY main.py $APP_DIR
-#WORKDIR $APP_DIR
-#ENTRYPOINT uvicorn $APP --app-dir $APP_DIR --host 0.0.0.0 --port $PORT --reload
-ENTRYPOINT cd $APP_DIR && hypercorn --reload --bind 0.0.0.0:$PORT --workers 3 $APP
+ENTRYPOINT cd $APP_DIR && hypercorn --reload --bind 0.0.0.0:$PORT --workers $NUM_WORKERS $APP
 EXPOSE $PORT
