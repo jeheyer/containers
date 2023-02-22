@@ -1,0 +1,4 @@
+service: gunicorn-sqlalchemy2
+runtime: python10
+env: standard
+entrypoint: gunicorn -w 3 wsgi:application

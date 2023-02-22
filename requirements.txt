@@ -1,13 +1,12 @@
-#mysql-connector-python
-#py-postgresql
+py-postgresql
 sqlalchemy
 pymysql
 paste
 python-multipart
 smart_open
 geoip2
+pyyaml
+tomli
 #boto3
 #google-api-python-client
 #google-cloud-storage
-pyyaml
-tomli

@@ -1,4 +1,4 @@
 service: quart
-runtime: python10
+runtime: python310
 env: standard
 entrypoint: hypercorn --workers 3 app:app

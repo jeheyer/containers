@@ -1,6 +1,10 @@
 FROM python:3.10-slim-bullseye
 MAINTAINER johnnylingo
+WORKDIR /tmp
+RUN pip3 install --upgrade pip
 RUN pip3 install gunicorn
+COPY ./requirements.txt ./
+RUN pip3 install -r requirements.txt
 ENV PORT=8081
 ENV WSGI_DIR=/opt
 ENV WSGI_APP=wsgi:application

@@ -1,0 +1,4 @@
+service: flask2-sqlalchemy2
+runtime: python10
+env: standard
+entrypoint: gunicorn -w 3 app:app
