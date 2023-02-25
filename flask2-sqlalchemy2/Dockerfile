@@ -11,5 +11,5 @@ ENV FLASK_APP=app:app
 ENV NUM_WORKERS=1
 ENV NUM_THREADS=8
 COPY app.py $FLASK_DIR
-ENTRYPOINT gunicorn -b 0.0.0.0:$PORT -w $NUM_WORKERS --threads=$NUM_THREADS --chdir=$FLASK_DIR $FLASK_APP
+ENTRYPOINT gunicorn -b 0.0.0.0:$PORT -w $NUM_WORKERS --threads=$NUM_THREADS --chdir=$FLASK_DIR --access-logfile '-' $FLASK_APP
 EXPOSE $PORT

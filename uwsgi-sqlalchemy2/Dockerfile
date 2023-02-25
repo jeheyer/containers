@@ -1,4 +1,6 @@
-FROM debian:bullseye-slim
+#FROM debian:bullseye-slim
+#FROM python:3.10-bullseye
+FROM ubuntu:latest
 MAINTAINER johnnylingo
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y

@@ -1,14 +1,15 @@
-FROM debian:latest
+FROM debian:bullseye-slim
 MAINTAINER johnnylingo
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt update && apt upgrade -y
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get -y install python3-pip
 RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN apt -y install python3-pip
-RUN pip3 install uwsgi paste python-multipart
 RUN rm -Rf /var/lib/apt/lists/*
+RUN pip3 install uwsgi
 ENV PORT=8080
 ENV WSGI_DIR=/opt
 ENV WSGI_FILE=wsgi.py
 COPY $WSGI_FILE $WSGI_DIR
 ENTRYPOINT cd $WSGI_DIR && uwsgi --http :$PORT --workers 3 --wsgi-file $WSGI_FILE --callable application --enable-threads
 EXPOSE $PORT
+
