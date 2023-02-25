@@ -1,12 +1,13 @@
 # Just Some Python-based Containers I've Built
 
-| Name                | Framework    | Web Server       | Base Image                  | Docker Image                                                                                |
-|---------------------|--------------|------------------|-----------------------------|---------------------------------------------------------------------------------------------|
-| fastapi-sqlalchemy2 | FastAPI 0.92 | Uvicorn 0.20.x   | `python:3.10-slim-bullseye` | [johnnylingo/fastapi-sqlalchemy2](https://hub.docker.com/r/johnnylingo/fastapi-sqlalchemy2) |
-| flask2-sqlalchemy2  | Flask 2.x    | Gunicorn 20.x    | `python:3.10-slim-bullseye` | [johnnylingo/flask2-sqlalchemy2](https://hub.docker.com/r/johnnylingo/flask2-sqlalchemy2)   |
-| quart-sqlalchemy2   | Quart 0.18.x | Hypercorn 0.14.x | `python:3.10-slim-bullseye` | [johnnylingo/quart-sqlalchemy2](https://hub.docker.com/r/johnnylingo/quart-sqlalchemy2)     |
-| uwsgi-sqlalchemy2   | None         | uwsgi 2.0.x      | `debian:bullseye-slim`      | [johnnylingo/uwsgi-sqlalchemy2](https://hub.docker.com/r/johnnylingo/uwsgi-sqlalchemy2)     |
-| apache-mod-wsgi     | None         | Apache 2.4.54    | `debian:bullseye-slim`      | [johnnylingo/apache-mod-wsgi](https://hub.docker.com/r/johnnylingo/apache-mod-wsgi)         |
+| Name                | Web Server       | Base Image                  | Docker Image                                                                                |
+|---------------------|------------------|-----------------------------|---------------------------------------------------------------------------------------------|
+| fastapi-sqlalchemy2 | Uvicorn 0.20.x   | `python:3.10-slim-bullseye` | [johnnylingo/fastapi-sqlalchemy2](https://hub.docker.com/r/johnnylingo/fastapi-sqlalchemy2) |
+| flask2-sqlalchemy2  | Gunicorn 20.x    | `python:3.10-slim-bullseye` | [johnnylingo/flask2-sqlalchemy2](https://hub.docker.com/r/johnnylingo/flask2-sqlalchemy2)   |
+| quart-sqlalchemy2   | Hypercorn 0.14.x | `python:3.10-slim-bullseye` | [johnnylingo/quart-sqlalchemy2](https://hub.docker.com/r/johnnylingo/quart-sqlalchemy2)     |
+| gunicorn-bare       | Gunicorn 20.x    | `python:3.10-slim-bullseye` | [johnnylingo/gunicorn-bare](https://hub.docker.com/r/johnnylingo/gunicorn-bare)             |
+| uwsgi-sqlalchemy2   | uwsgi 2.0.x      | `ubuntu:latest`             | [johnnylingo/uwsgi-sqlalchemy2](https://hub.docker.com/r/johnnylingo/uwsgi-sqlalchemy2)     |
+| apache-mod-wsgi     | Apache 2.4.54    | `debian:bullseye-slim`      | [johnnylingo/apache-mod-wsgi](https://hub.docker.com/r/johnnylingo/apache-mod-wsgi)         |
 
 # Usage Instructions
 
